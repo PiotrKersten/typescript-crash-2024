@@ -1,3 +1,4 @@
+/*
 type Address = {
   street: string
   city: string
@@ -35,3 +36,4 @@ function displayInfo(person){
 }
 
 displayInfo(person1)
+*/
