@@ -1,4 +1,4 @@
-
+/*
 type User = {
   username: string
   role: "guest" | "member" | "admin"
@@ -7,3 +7,4 @@ type User = {
 type UserRole = "guest" | "member" | "admin"
 
 let userRole: UserRole = "guest"
+*/
