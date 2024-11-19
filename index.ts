@@ -46,6 +46,15 @@ function placeOrder(pizzaName: string): Order | undefined{
   return newOrder;
 }
 
+function addToArray<T>(array: T[], item: T): T [] {
+  array.push(item)
+  return array
+}
+
+addToArray<Pizza>(menu, { id: nextPizzaId++, name: "Chicken Bacon Ranch", price: 12})
+addToArray<Order>(orderQueue, { id: nextOrderId++, pizza: menu[2], status: "completed"})
+
+
 function completeOrder(orderId: number): Order | undefined{
   const orderFound = orderQueue.find(order => order.id === orderId);
   if (!orderFound){
@@ -68,11 +77,11 @@ export function getPizzaDetail(identifier: number | string): Pizza | undefined{
 }
 
 
-
+/*
 addNewPizza({ name: "Chicken pizza", price: 12 });
 addNewPizza({ name: "BBQ", price: 10 });
 addNewPizza({ name: "Spicy", price: 11 });
-
+*/
 
 console.log("Menu: ", menu);
 
